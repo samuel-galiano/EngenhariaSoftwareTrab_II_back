@@ -1,0 +1,14 @@
+2024-11-04 14:57:45.230785-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HORA_MARCADA" already exists; SQL statement:
+CREATE TABLE Hora_marcada (
+                              id INTEGER PRIMARY KEY,
+                              cliente_id INTEGER NOT NULL,
+                              hora_marcada VARCHAR(50),
+                              dia_marcado TIMESTAMP NOT NULL,
+                              valor_id INTEGER,
+                              FOREIGN KEY (cliente_id) REFERENCES Clientes(id),
+                              FOREIGN KEY (valor_id) REFERENCES Valores(id)
+) [42101-224]
+2024-11-04 15:00:29.132712-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]FROMCONCLUIDOS"; SQL statement:
+SELECT * FROMCONCLUIDOS [42000-224]
