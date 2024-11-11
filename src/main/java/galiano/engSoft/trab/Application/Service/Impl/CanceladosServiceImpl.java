@@ -36,7 +36,7 @@ public class CanceladosServiceImpl implements CanceladoService {
     public void updateCanceladoById(Long id, CanceladosEntity cancelado) {
         CanceladosEntity canceladoEncontrado = canceladoRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cancelamento não encontrado"));
         canceladoEncontrado.setClienteId(cancelado.getClienteId());
-        canceladoEncontrado.setData(cancelado.getData());
+        canceladoEncontrado.setData_cancelamento(cancelado.getData_cancelamento());
         canceladoEncontrado.setMotivo(cancelado.getMotivo());
 
         canceladoRepository.save(canceladoEncontrado);
