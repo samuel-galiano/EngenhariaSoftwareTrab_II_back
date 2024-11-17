@@ -1,11 +1,12 @@
 package galiano.engSoft.trab.Application.Service;
 
 import galiano.engSoft.trab.Application.Domain.Entity.HoraMarcadaEntity;
+import galiano.engSoft.trab.Application.Rest.DTOs.HoraMarcadaDTO;
 
 import java.util.List;
 
 public interface HoraMarcadaService {
-    List<HoraMarcadaEntity> findAllHorasMarcadas();
+    List<HoraMarcadaDTO> findAllHorasMarcadas();
 
     void saveHoraMarcada(HoraMarcadaEntity horaMarcada);
 

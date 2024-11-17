@@ -29,7 +29,7 @@ public class RelatorioServiceImpl implements RelatorioService {
 
     @Override
     public RelatorioEntity findRelatorioById(Long id) {
-        return relatorioRepository.findById(id).orElse(null);
+        return relatorioRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "id relatorio nao encontrado"));
     }
 
     @Override
